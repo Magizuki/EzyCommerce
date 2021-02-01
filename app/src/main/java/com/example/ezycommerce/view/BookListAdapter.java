@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 
 
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.ezycommerce.databinding.BookListRowBinding;
 import com.example.ezycommerce.model.Book;
 
@@ -44,7 +45,10 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
         Book book = books.get(position);
         holder.binding.setBook(book);
         holder.binding.bookPrice.setText( "$ " + book.getPrice().toString());
-        Glide.with(ctx).load(book.getImg()).into(holder.binding.bookImg);
+        Glide.with(ctx).load(book.getImg())
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
+                .skipMemoryCache(true)
+                .into(holder.binding.bookImg);
 
     }
 
