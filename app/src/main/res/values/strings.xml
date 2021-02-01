@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">EzyCommerce</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="business">business</string>
+    <string name="cookbooks">cookbooks</string>
+    <string name="mystery">mystery</string>
+    <string name="scifi">scifi</string>
 </resources>

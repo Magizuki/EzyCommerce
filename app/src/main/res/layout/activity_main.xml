@@ -1,18 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.MainActivity"
+        android:background="@color/black">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/HeaderView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/teal_200"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="EzyCommerce"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="User 1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="150dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/ic_baseline_person_24"
+                android:background="@drawable/round_shape"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/BtnView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/HeaderView"
+            android:background="@color/purple_200"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/BusinessBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/business"
+                android:textSize="13sp"
+                />
+
+            <Button
+                android:id="@+id/CookBooksBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/cookbooks"/>
+
+            <Button
+                android:id="@+id/MysteryBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/mystery"/>
+
+            <Button
+                android:id="@+id/SciFiBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="@string/scifi"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/container"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/BtnView"
+            />
+
+        <ProgressBar
+            android:id="@+id/loadingView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+</layout>

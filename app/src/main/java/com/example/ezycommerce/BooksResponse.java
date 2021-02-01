@@ -4,6 +4,7 @@ import com.example.ezycommerce.model.Book;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class BooksResponse {
@@ -25,7 +26,7 @@ public class BooksResponse {
     private String credits;
     @SerializedName("products")
     @Expose
-    private List<Book> books = null;
+    private ArrayList<Book> books = null;
 
     public Integer getStatusCode() {
         return statusCode;
@@ -67,11 +68,11 @@ public class BooksResponse {
         this.credits = credits;
     }
 
-    public List<Book> getBooks() {
+    public ArrayList<Book> getBooks() {
         return books;
     }
 
-    public void setBooks(List<Book> books) {
+    public void setBooks(ArrayList<Book> books) {
         this.books = books;
     }
 }
