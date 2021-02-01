@@ -1,7 +1,9 @@
 package com.example.ezycommerce.view;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -64,6 +66,15 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
         public ViewHolder(@NonNull BookListRowBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
+
+            binding.Item.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(ctx, BookDetailActivity.class);
+                    intent.putExtra("book", books.get(getAdapterPosition()));
+                    ctx.startActivity(intent);
+                }
+            });
 
 
         }

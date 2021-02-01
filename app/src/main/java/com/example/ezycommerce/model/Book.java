@@ -3,7 +3,10 @@ package com.example.ezycommerce.model;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-public class Book {
+import java.io.Serializable;
+import java.util.Observable;
+
+public class Book implements Serializable {
 
     @SerializedName("id")
     @Expose

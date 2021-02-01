@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="book"
+            type="com.example.ezycommerce.model.Book" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.BookDetailActivity"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:id="@+id/HeaderView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/teal_200"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="EzyCommerce"
+                android:textColor="@color/black"
+                android:layout_margin="10dp"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="User 1"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="150dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:src="@drawable/ic_baseline_person_24"
+                android:background="@drawable/round_shape"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/bookImg"
+            android:layout_width="300dp"
+            android:layout_height="400dp"
+            android:src="@{book.img}"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/HeaderView"
+            />
+
+        <TextView
+            android:id="@+id/bookName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/bookImg"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            tools:text="Book Name"
+            android:text="@{book.name}"
+            android:textSize="15sp"
+            />
+
+        <Button
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:text="@string/buy"
+            android:layout_below="@+id/bookImg"
+            android:layout_toRightOf="@+id/bookName"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="40dp"
+            />
+
+        <TextView
+            android:id="@+id/bookPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/bookName"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            tools:text="Book Price"
+            android:textSize="13sp"
+            />
+
+        <TextView
+            android:id="@+id/DescriptionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/bookPrice"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/white"
+            android:text="@string/description"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/bookDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_below="@+id/DescriptionTitle"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:text="@{book.description}"
+            tools:text="description"
+            android:textSize="12sp"
+            />
+
+
+
+
+    </RelativeLayout>
+
+</layout>

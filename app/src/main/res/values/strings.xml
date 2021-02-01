@@ -6,4 +6,6 @@
     <string name="cookbooks">cookbooks</string>
     <string name="mystery">mystery</string>
     <string name="scifi">scifi</string>
+    <string name="description">Description</string>
+    <string name="buy">Buy</string>
 </resources>
