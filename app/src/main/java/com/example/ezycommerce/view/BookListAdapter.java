@@ -79,6 +79,5 @@ public class BookListAdapter extends RecyclerView.Adapter<BookListAdapter.ViewHo
 
         }
     }
-
-
+    
 }

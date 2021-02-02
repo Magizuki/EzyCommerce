@@ -19,7 +19,7 @@
             android:id="@+id/HeaderView"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/teal_200"
+            android:background="@color/orange"
             android:orientation="horizontal"
             >
 
@@ -81,8 +81,9 @@
             android:text="@string/buy"
             android:layout_below="@+id/bookImg"
             android:layout_toRightOf="@+id/bookName"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="30dp"
             android:layout_marginTop="40dp"
+            android:background="@drawable/customrectanglebutton"
             />
 
         <TextView

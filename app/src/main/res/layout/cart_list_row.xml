@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="cart"
+            type="com.example.ezycommerce.model.Cart" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="25dp"
+            android:clickable="true"
+            >
+
+            <LinearLayout
+                android:id="@+id/Item"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/bookImg"
+                    android:layout_width="80dp"
+                    android:layout_height="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@{cart.bookImage}"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/bookName"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@{cart.bookName}"
+                        tools:text="Book Name"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/bookAuthor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Book Author"
+                        android:text="@{cart.bookAuthor}"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+                    <TextView
+                        android:id="@+id/bookPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="Price"
+                        android:textSize="12sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="10dp"/>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/minusBtn"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:text="@string/minus"
+                    android:background="@drawable/round_custom_button"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <TextView
+                    android:id="@+id/quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="3"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginLeft="5dp"
+                    />
+
+                <Button
+                    android:id="@+id/addBtn"
+                    android:layout_width="23dp"
+                    android:layout_height="23dp"
+                    android:text="@string/add"
+                    android:background="@drawable/round_custom_button"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginLeft="5dp"
+                    />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>

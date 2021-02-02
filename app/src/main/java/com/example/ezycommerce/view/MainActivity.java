@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
 
-        binding.BusinessBtn.setTextColor(Color.YELLOW);
+        binding.BusinessBtn.setTextColor(Color.WHITE);
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().add(binding.container.getId() , businessBookFragment).commit();
 
@@ -84,10 +84,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.loadingView.setVisibility(View.VISIBLE);
             BusinessBookFragment businessBookFragment = new BusinessBookFragment();
 
-            binding.BusinessBtn.setTextColor(Color.YELLOW);
-            binding.SciFiBtn.setTextColor(Color.WHITE);
-            binding.MysteryBtn.setTextColor(Color.WHITE);
-            binding.CookBooksBtn.setTextColor(Color.WHITE);
+            binding.BusinessBtn.setTextColor(Color.WHITE);
+            binding.SciFiBtn.setTextColor(Color.BLACK);
+            binding.MysteryBtn.setTextColor(Color.BLACK);
+            binding.CookBooksBtn.setTextColor(Color.BLACK);
 
             Call<BooksResponse> responseCall = service.getBooks("2201727834","Christopher Irvine Sendjaya");
 
@@ -126,9 +126,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             }
 
-//            FragmentManager fragmentManager = getSupportFragmentManager();
-//            fragmentManager.beginTransaction().add(binding.container.getId() , businessBookFragment).commit();
-
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(binding.container.getId(), businessBookFragment);
@@ -139,10 +136,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if(view.getId() == binding.CookBooksBtn.getId()){
             binding.loadingView.setVisibility(View.VISIBLE);
             CookBookFragment cookBookFragment = new CookBookFragment();
-            binding.BusinessBtn.setTextColor(Color.WHITE);
-            binding.SciFiBtn.setTextColor(Color.WHITE);
-            binding.MysteryBtn.setTextColor(Color.WHITE);
-            binding.CookBooksBtn.setTextColor(Color.YELLOW);
+            binding.BusinessBtn.setTextColor(Color.BLACK);
+            binding.SciFiBtn.setTextColor(Color.BLACK);
+            binding.MysteryBtn.setTextColor(Color.BLACK);
+            binding.CookBooksBtn.setTextColor(Color.WHITE);
 
             Call<BooksResponse> responseCall = service.getBooks("2201727834","Christopher Irvine Sendjaya");
 
@@ -181,10 +178,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         else if(view.getId() == binding.MysteryBtn.getId()){
             binding.loadingView.setVisibility(View.VISIBLE);
             MysteryBookFragment mysteryBookFragment = new MysteryBookFragment();
-            binding.BusinessBtn.setTextColor(Color.WHITE);
-            binding.SciFiBtn.setTextColor(Color.WHITE);
-            binding.MysteryBtn.setTextColor(Color.YELLOW);
-            binding.CookBooksBtn.setTextColor(Color.WHITE);
+            binding.BusinessBtn.setTextColor(Color.BLACK);
+            binding.SciFiBtn.setTextColor(Color.BLACK);
+            binding.MysteryBtn.setTextColor(Color.WHITE);
+            binding.CookBooksBtn.setTextColor(Color.BLACK);
 
             Call<BooksResponse> responseCall = service.getBooks("2201727834","Christopher Irvine Sendjaya");
 
@@ -224,10 +221,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             binding.loadingView.setVisibility(View.VISIBLE);
             SciFiBookFragment sciFiBookFragment = new SciFiBookFragment();
 
-            binding.BusinessBtn.setTextColor(Color.WHITE);
-            binding.SciFiBtn.setTextColor(Color.YELLOW);
-            binding.MysteryBtn.setTextColor(Color.WHITE);
-            binding.CookBooksBtn.setTextColor(Color.WHITE);
+            binding.BusinessBtn.setTextColor(Color.BLACK);
+            binding.SciFiBtn.setTextColor(Color.WHITE);
+            binding.MysteryBtn.setTextColor(Color.BLACK);
+            binding.CookBooksBtn.setTextColor(Color.BLACK);
 
             Call<BooksResponse> responseCall = service.getBooks("2201727834","Christopher Irvine Sendjaya");
 

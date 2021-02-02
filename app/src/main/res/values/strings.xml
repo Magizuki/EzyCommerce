@@ -8,4 +8,12 @@
     <string name="scifi">scifi</string>
     <string name="description">Description</string>
     <string name="buy">Buy</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="add">+</string>
+    <string name="minus">-</string>
+    <string name="subtotal">SUBTOTAL</string>
+    <string name="shipping">SHIPPING</string>
+    <string name="taxes">TAXES</string>
+    <string name="cancel">Cancel</string>
+    <string name="free">FREE</string>
 </resources>

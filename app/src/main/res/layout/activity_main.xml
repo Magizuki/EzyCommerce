@@ -13,7 +13,7 @@
             android:id="@+id/HeaderView"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="@color/teal_200"
+            android:background="@color/orange"
             android:orientation="horizontal"
             >
 
@@ -50,34 +50,42 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_below="@+id/HeaderView"
-            android:background="@color/purple_200"
+            android:background="@color/red"
             android:orientation="horizontal">
 
             <Button
+                android:layout_weight="1"
                 android:id="@+id/BusinessBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:text="@string/business"
                 android:textSize="13sp"
+                android:background="@drawable/customrectanglebutton"
                 />
 
             <Button
+                android:layout_weight="1"
                 android:id="@+id/CookBooksBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/cookbooks"/>
+                android:text="@string/cookbooks"
+                android:background="@drawable/customrectanglebutton"/>
 
             <Button
+                android:layout_weight="1"
                 android:id="@+id/MysteryBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/mystery"/>
+                android:text="@string/mystery"
+                android:background="@drawable/customrectanglebutton"/>
 
             <Button
+                android:layout_weight="1"
                 android:id="@+id/SciFiBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:text="@string/scifi"/>
+                android:text="@string/scifi"
+                android:background="@drawable/customrectanglebutton"/>
 
         </LinearLayout>
 
