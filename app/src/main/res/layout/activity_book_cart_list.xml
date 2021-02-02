@@ -204,23 +204,23 @@
             />
 
         <Button
-            android:id="@+id/CancelBtn"
+            android:id="@+id/NextBtn"
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_below="@id/TotalPriceView"
-            android:text="@string/cancel"
+            android:text="@string/next"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="110dp"
             android:background="@drawable/customrectanglebutton"
             />
 
         <Button
-            android:id="@+id/NextBtn"
+            android:id="@+id/CancelBtn"
             android:layout_width="80dp"
             android:layout_height="40dp"
             android:layout_below="@id/TotalPriceView"
-            android:text="Next"
-            android:layout_toRightOf="@id/CancelBtn"
+            android:text="@string/cancel"
+            android:layout_toRightOf="@id/NextBtn"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="30dp"
             android:background="@drawable/customrectanglebutton"
