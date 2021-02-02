@@ -31,6 +31,15 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public void insertBookToCart(Book book){
 
+
+        if(book.getName().equals("Harry Potter and the Sorcerer's Stone")){
+            String insert_CartTable_query = "INSERT INTO carts(BookName, BookAuthor, BookPrice, BookImage, Quantity) VALUES ( 'Harry Potter and the Sorcerers Stone', '" +book.getAuthor()+ "', '" +book.getPrice()+ "', '" +book.getImg()+ "', 1); ";
+            SQLiteDatabase db = this.getReadableDatabase();
+            db.execSQL(insert_CartTable_query);
+            db.close();
+            return;
+        }
+
         String insert_CartTable_query = "INSERT INTO carts(BookName, BookAuthor, BookPrice, BookImage, Quantity) VALUES ( '"+book.getName()+"', '" +book.getAuthor()+ "', '" +book.getPrice()+ "', '" +book.getImg()+ "', 1); ";
         SQLiteDatabase db = this.getReadableDatabase();
         db.execSQL(insert_CartTable_query);
@@ -101,15 +110,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.close();
 
-    }
-
-    public void deleteItemCart(Cart cart){
-
-        SQLiteDatabase db = this.getReadableDatabase();
-        String delete_ItemCartTable_query = "DELETE FROM carts WHERE id = '" + cart.getId() + "' ;";
-        db.execSQL(delete_ItemCartTable_query);
-
-        db.close();
     }
 
 

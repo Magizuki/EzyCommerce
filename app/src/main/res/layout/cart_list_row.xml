@@ -47,7 +47,7 @@
                         android:text="@{cart.bookName}"
                         tools:text="Book Name"
                         android:textColor="@color/black"
-                        android:textSize="10sp"
+                        android:textSize="11sp"
                         android:textStyle="bold"
                         android:layout_marginTop="10dp"
                         android:layout_marginLeft="10dp"/>

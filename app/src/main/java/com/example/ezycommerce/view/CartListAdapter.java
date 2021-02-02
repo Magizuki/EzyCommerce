@@ -33,12 +33,6 @@ public class CartListAdapter extends RecyclerView.Adapter<CartListAdapter.ViewHo
         return carts;
     }
 
-    public void update(ArrayList<Cart> newCart){
-        carts.clear();
-        carts.addAll(newCart);
-        notifyDataSetChanged();
-    }
-
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
