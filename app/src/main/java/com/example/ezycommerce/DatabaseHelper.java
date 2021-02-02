@@ -15,12 +15,12 @@ import java.util.ArrayList;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     public DatabaseHelper(@Nullable Context context) {
-        super(context, "EzyCommerce.db", null, 1);
+        super(context, "EzyCommerceApps.db", null, 1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String create_CartTable_query = "CREATE TABLE carts ( id INTEGER PRIMARY KEY AUTOINCREMENT, BookName TEXT , BookAuthor TEXT, BookPrice INTEGER, BookImage TEXT, Quantity INTEGER)";
+        String create_CartTable_query = "CREATE TABLE carts ( id INTEGER PRIMARY KEY AUTOINCREMENT, BookName TEXT , BookAuthor TEXT, BookPrice DOUBLE, BookImage TEXT, Quantity INTEGER)";
         db.execSQL(create_CartTable_query);
     }
 
@@ -76,7 +76,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 int id = cursor.getInt(0);
                 String Name = cursor.getString(1);
                 String author = cursor.getString(2);
-                int price = cursor.getInt(3);
+                double price = cursor.getDouble(3);
                 String image = cursor.getString(4);
                 int quantity = cursor.getInt(5);
                 carts.add(new Cart(id, quantity, Name, price, author, image));

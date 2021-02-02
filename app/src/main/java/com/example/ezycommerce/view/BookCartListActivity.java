@@ -21,7 +21,8 @@ public class BookCartListActivity extends AppCompatActivity {
     private ArrayList<Cart> carts;
     private DatabaseHelper db;
     private CartListAdapter adapter;
-    private int subtotal = 0, taxes = 0, totalprice = 0;
+    private double subtotal = 0;
+    private float taxes = 0, totalprice = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,12 +33,12 @@ public class BookCartListActivity extends AppCompatActivity {
 
         for(Cart cart: carts){
             int quantity = cart.getQuantity();
-            int price = cart.getBookPrice();
+            double price = cart.getBookPrice();
             subtotal += (quantity * price);
         }
 
-        taxes = subtotal / 10;
-        totalprice = subtotal + taxes;
+        taxes = (float) subtotal / 10;
+        totalprice = (float) subtotal + taxes;
 
         binding.SubTotal.setText( "$ "+ subtotal);
         binding.Taxes.setText("$ " + taxes);
@@ -78,12 +79,12 @@ public class BookCartListActivity extends AppCompatActivity {
         subtotal = 0;
         for(Cart cart: newcarts){
             int quantity = cart.getQuantity();
-            int price = cart.getBookPrice();
+            double price = cart.getBookPrice();
             subtotal += (quantity * price);
         }
 
-        taxes = subtotal / 10;
-        totalprice = subtotal + taxes;
+        taxes = (float) subtotal / 10;
+        totalprice = (float) subtotal + taxes;
 
         binding.SubTotal.setText( "$ "+ subtotal);
         binding.Taxes.setText("$ " + taxes);

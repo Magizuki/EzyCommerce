@@ -2,16 +2,17 @@ package com.example.ezycommerce.model;
 
 public class Cart {
 
-    private int id, quantity, BookPrice;
+    private int id, quantity;
+    private double BookPrice;
     private String BookName, BookAuthor, BookImage;
 
-    public Cart(int id, int quantity, String bookName, int bookPrice, String bookAuthor, String bookImage) {
+    public Cart(int id, int quantity, String bookName, double bookPrice, String bookAuthor, String bookImage) {
         this.id = id;
         this.quantity = quantity;
-        BookName = bookName;
-        BookPrice = bookPrice;
-        BookAuthor = bookAuthor;
-        BookImage = bookImage;
+        this.BookName = bookName;
+        this.BookPrice = bookPrice;
+        this.BookAuthor = bookAuthor;
+        this.BookImage = bookImage;
     }
 
     public int getId() {
@@ -38,11 +39,11 @@ public class Cart {
         BookName = bookName;
     }
 
-    public int getBookPrice() {
+    public double getBookPrice() {
         return BookPrice;
     }
 
-    public void setBookPrice(int bookPrice) {
+    public void setBookPrice(double bookPrice) {
         BookPrice = bookPrice;
     }
 
